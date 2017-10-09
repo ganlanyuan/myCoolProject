@@ -4,8 +4,8 @@ const backstopjs = require('backstopjs');
 gulp.task('ref', () => backstopjs('reference'));
 gulp.task('test', () => backstopjs('test'));
 
-
 // https://github.com/garris/BackstopJS
+// https://css-tricks.com/automating-css-regression-testing/
 
 // 1. cd project/root/
 // 2. npm install -g backstopjs
