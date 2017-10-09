@@ -16,9 +16,9 @@
   "onReadyScript": "chromy/onReady.js",
   "scenarios": [
     {
-      "label": "BackstopJS Homepage",
+      "label": "My Homepage",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "./index.html",
+      "url": "index.html",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
@@ -28,7 +28,14 @@
       "hoverSelector": "",
       "clickSelector": "",
       "postInteractionWait": "",
-      "selectors": ["body"],
+      "selectors": [
+        ".navbar",
+        ".jumbotron",
+        "body .col-md-4:nth-of-type(1)",
+        "body .col-md-4:nth-of-type(2)",
+        "body .col-md-4:nth-of-type(3)",
+        "footer"
+      ],
       "selectorExpansion": true,
       "misMatchThreshold" : 0.1,
       "requireSameDimensions": true

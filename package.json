@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "backstopjs": "^3.0.26"
+    "backstopjs": "^3.0.26",
+    "gulp": "^3.9.1"
   },
   "devDependencies": {},
   "scripts": {
