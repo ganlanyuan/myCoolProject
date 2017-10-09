@@ -14,3 +14,8 @@ gulp.task('test', () => backstopjs('test'));
 // 5. backstop reference
 // 6. backstop test
 // 7. backstop approve
+
+const Gemini = require('gemini/api'),
+      gemini = new Gemini('./.gemini.js');
+
+gulp.task('update', () => {gemini.update('./gemini');} );
