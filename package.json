@@ -6,7 +6,10 @@
   "dependencies": {
     "backstopjs": "^3.0.26",
     "gemini": "^5.0.0-alpha.8",
-    "gulp": "^3.9.1"
+    "gemini-browserstack": "^1.1.0",
+    "gulp": "^3.9.1",
+    "html-reporter": "^0.7.0",
+    "selenium-webdriver": "^3.6.0"
   },
   "devDependencies": {},
   "scripts": {

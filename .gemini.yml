@@ -1,0 +1,43 @@
+rootUrl: 'http://localhost:8888'
+# screenshotsDir: './screens'
+# windowSize: 600x400
+compositeImage: true             # fix "The region bottom bound is outside of the viewport height"
+
+system:
+  # exclude:
+  #   - 'gemini/gemini-reports/**'
+  #   - 'node_modules/**'
+  plugins:
+    browserstack:
+      username: ''
+      accessKey: ''
+    'html-reporter':
+      enabled: true
+      path: 'gemini/gemini-reports'
+      errorsOnly: false
+      baseHost: 'http://localhost:8888'
+ 
+browsers:
+  ie11:
+    windowSize: 600x400
+    desiredCapabilities:
+      os: 'WINDOWS'
+      os_version: '7'
+      browserName: 'internet explorer'
+      version: '11'
+ 
+  chrome43:
+    windowSize: 1024x768
+    desiredCapabilities:
+      os: 'WINDOWS'
+      os_version: '10'
+      browserName: 'chrome'
+      version: '43'
+
+sets:
+  desktop:
+    files:
+      - 'gemini/tests/desktop'
+    browsers:
+      - ie11
+      - chrome43

@@ -16,6 +16,18 @@ gulp.task('test', () => backstopjs('test'));
 // 7. backstop approve
 
 const Gemini = require('gemini/api'),
-      gemini = new Gemini('./.gemini.js');
+      gemini = new Gemini('./.gemini.yml');
 
-gulp.task('update', () => {gemini.update('./gemini');} );
+// gulp.task('update', () => { gemini.update('./gemini'); } );
+var collection = gemini.readTests();
+// var collection = gemini.readTests('gemini/tests/desktop');
+
+gulp.task('default', () => {
+  // gemini.readTests()
+  //   .done(function(collection) {
+  //     collection.topLevelSuites().forEach(function(suite) {
+  //       console.log(suite.name);
+  //     });
+  //   });
+  return gemini.test(collection);
+});
