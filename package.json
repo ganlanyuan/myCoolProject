@@ -9,9 +9,11 @@
     "gemini-browserstack": "^1.1.0",
     "gulp": "^3.9.1",
     "html-reporter": "^0.7.0",
+    "webdriverio": "^4.8.0"
+  },
+  "devDependencies": {
     "selenium-webdriver": "^3.6.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

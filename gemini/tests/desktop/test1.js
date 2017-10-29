@@ -1,5 +1,5 @@
 gemini.suite('jumbotron', (suite) => {
   suite.setUrl('/')
-    .setCaptureElements('html')
+    .setCaptureElements('body')
     .capture('plain');
 });

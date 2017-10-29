@@ -18,8 +18,8 @@ gulp.task('test', () => backstopjs('test'));
 const Gemini = require('gemini/api'),
       gemini = new Gemini('./.gemini.yml');
 
-// gulp.task('update', () => { gemini.update('./gemini'); } );
-var collection = gemini.readTests();
+// var collection = gemini.readTests();
+// gulp.task('update', () => { gemini.update(collection); } );
 // var collection = gemini.readTests('gemini/tests/desktop');
 
 gulp.task('default', () => {
@@ -29,5 +29,6 @@ gulp.task('default', () => {
   //       console.log(suite.name);
   //     });
   //   });
-  return gemini.test(collection);
+  return gemini.readTests()
+    .then((collection) => gemini.test(collection));
 });

@@ -20,6 +20,7 @@ var driver = new webdriver.Builder().
   build();
 
 driver.get('http://www.google.com');
+driver.manage().window().setSize(600, 400);
 driver.findElement(webdriver.By.name('q')).sendKeys('BrowserStack');
 // driver.findElement(webdriver.By.name('btnK')).click();
 
